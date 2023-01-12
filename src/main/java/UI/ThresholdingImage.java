@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import org.opencv.core.Core;
+import nu.pattern.OpenCV;
 import org.opencv.core.Mat;
 import org.opencv.highgui.HighGui;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -35,7 +35,8 @@ public class ThresholdingImage extends javax.swing.JFrame {
      */
     public ThresholdingImage() {      
         nu.pattern.OpenCV.loadLocally();
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        OpenCV.loadShared();
         initComponents();
     }
 
